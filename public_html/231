@@ -1,0 +1,30 @@
+Python 2.7.3 (default, Jun 22 2015, 19:33:41) 
+[GCC 4.6.3] on linux2
+Type "copyright", "credits" or "license()" for more information.
+>>> # Fails 231. py
+# Autors ImantsZalitis
+import numpy
+from PythonMagick import Image
+m = numpy.matrix([ \
+[1,1,1,1,1], \
+[0,0,1,0,0], \
+[0,0,1,0,0], \
+[0,0,1,0,1], \
+[0,0,1,0,1], \
+[0,0,1,0,1], \
+[1,1,1,1,1], \
+])
+# Izgatavojam jaunu objektu - bilde
+# Objekta izmeers 3x3 pixels
+bilde = Image ( "5x7", "#22 aaff" )
+for i in range (0,5):
+ for j in range (0,7):
+  if(m[j,i]==1):
+
+# Izgatavojam mainigos x un y
+# Uzstaada objekta 'bilde ' x,y pixela kraasu
+   bilde . pixelColor ( x, y, "# eeff22 " )
+# 3x3 pixels palielina liidz 200 x200
+bilde . scale ( "200 x200" )
+# Objektu 'bilde '' ieraksta failaa
+bilde . write ( "231. png" )

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<img id="myImage" onclick="changeImage()" src="http://www.w3schools.com/js/pic_bulbon.gif" width="100" height="180">
+
+<p>Click the light bulb to turn on/off the light.</p>
+
+<script>
+function changeImage() {
+    var x = document.getElementById('myImage');
+    if (x.src.match("bulbon")) {
+        x.src = "http://www.w3schools.com/js/pic_bulboff.gif";
+    } else {
+        x.src = "http://www.w3schools.com/js/pic_bulbon.gif";
+    }
+}
+</script>
+
+</body>
+</html>
+
